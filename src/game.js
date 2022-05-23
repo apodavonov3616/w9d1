@@ -32,4 +32,16 @@ Game.prototype.moveObjects = function () {
     }
 }
 
+Game.prototype.wrap = function(pos) {
+    for (i=0; i< 2; i++) {
+        if (pos[i] > 400) {
+            pos[i] = 0
+        }
+        if (pos[i] < 0) {
+            pos[i] = 400
+        }
+    }
+    return pos
+}
+
 module.exports = Game
