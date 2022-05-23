@@ -1,3 +1,5 @@
+// const Asteroid = require("./asteroid.js");
+
 function MovingObject(options) {
     this.pos = options.pos;
     this.vel = options.vel;
