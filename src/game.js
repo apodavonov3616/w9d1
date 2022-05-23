@@ -20,11 +20,14 @@ Game.prototype.addAsteroids = function (){
 Game.prototype.draw = function(ctx) {
     ctx.clearRect(0, 0, Game.DIM_X, Game.DIM_Y)
     for (i=0; i<this.asteroids.length; i++) {
-        this[i].draw(document.getElementById("game-canvas").getContext("2d"))
+        this.asteroids[i].draw(document.getElementById("game-canvas").getContext("2d"))
     }
 }
 
-// Game.prototype.myObjects = function {
-// }
+Game.prototype.moveObjects = function () {
+    for (i=0; i<this.asteroids.length; i++) {
+        this.asteroids[i].move()
+    }
+}
 
 module.exports = Game
