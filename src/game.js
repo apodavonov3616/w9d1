@@ -19,6 +19,8 @@ Game.prototype.addAsteroids = function (){
 
 Game.prototype.draw = function(ctx) {
     ctx.clearRect(0, 0, Game.DIM_X, Game.DIM_Y)
+    ctx.fillStyle= "blue";
+    ctx.fillRect(0, 0, Game.DIM_X, Game.DIM_Y);
     for (i=0; i<this.asteroids.length; i++) {
         this.asteroids[i].draw(document.getElementById("game-canvas").getContext("2d"))
     }
