@@ -1,4 +1,4 @@
-const GameObject = require("./game.js")
+const Game = require("./game.js")
 
 function GameView(game, ctx) {
     this.game = game;
